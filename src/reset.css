@@ -1,0 +1,61 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 8px 24px;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+footer {
+	display: flex;
+	width: 91.666667%;
+	height: 6rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-top-width: 2px;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+}
