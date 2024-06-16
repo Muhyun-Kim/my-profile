@@ -4,3 +4,12 @@ body {
 	background-color: #f0f0f0;
 	font-family: 'Noto Serif JP', serif;
 }
+
+main {
+	margin-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+p {
+	white-space: nowrap;
+}

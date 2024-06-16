@@ -50,7 +50,7 @@ table {
 footer {
 	display: flex;
 	width: 91.666667%;
-	height: 6rem;
+	height: 5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	border-top-width: 2px;
@@ -58,4 +58,5 @@ footer {
 	position: fixed;
 	bottom: 0;
 	z-index: 10;
+	background-color: #f0f0f0;
 }

@@ -2,7 +2,7 @@
 </script>
 
 <div class="root-page">
-	<div class="root-page-fram">
+	<div class="root-page-frame">
 		<img src="/images/profile.png" alt="profile" />
 		<div class="introduction">
 			<h2>WEBフルスタックエンジニア</h2>
@@ -16,13 +16,12 @@
 		display: flex;
 		justify-content: center;
 	}
-	.root-page-fram {
+	.root-page-frame {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 6rem;
 	}
-	.root-page-fram img {
+	.root-page-frame img {
 		width: 25%;
 		border-radius: 9999px;
 	}
