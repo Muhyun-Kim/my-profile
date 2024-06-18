@@ -1,4 +1,39 @@
 <script lang="ts">
+	import emailjs from 'emailjs-com';
+
+	let email = '';
+	let name = '';
+	let title = '';
+	let body = '';
+
+	async function handleSubmit(event: Event) {
+		event.preventDefault();
+
+		const templateParams = {
+			from_name: name,
+			from_email: email,
+			subject: title,
+			message: body
+		};
+
+		try {
+			const res = await emailjs.send(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				templateParams,
+				import.meta.env.VITE_EMAILJS_USER_ID
+			);
+
+			if (res.status === 200) {
+				alert('送信しました。');
+			} else {
+				alert('送信に失敗しました。');
+			}
+		} catch (error) {
+			console.error(error);
+			alert('送信に失敗しました。');
+		}
+	}
 </script>
 
 <div class="contact-page">
@@ -12,30 +47,30 @@
 					<p>muhyun.kim.dev@gmail.com</p>
 				</div>
 			</div>
-			<form action="submit" class="contact-form">
+			<form on:submit={handleSubmit} class="contact-form">
 				<div class="form-frame">
 					<div class="form-l">
 						<div class="submit-el">
 							<label for="email">メールアドレス</label>
-							<input id="email" name="email" type="email" />
+							<input id="email" name="email" type="email" bind:value={email} />
 						</div>
 						<div class="submit-el">
 							<label for="email">お名前</label>
-							<input id="name" name="name" type="text" />
+							<input id="name" name="name" type="text" bind:value={name} />
 						</div>
 						<div class="submit-el">
 							<label for="email">件名</label>
-							<input id="tilte" name="title" type="text" />
+							<input id="tilte" name="title" type="text" bind:value={title} />
 						</div>
 					</div>
 					<div class="form-r">
 						<div class="submit-el">
 							<label for="email">本文</label>
-							<textarea id="body" name="body"></textarea>
+							<textarea id="body" name="body" bind:value={body}></textarea>
 						</div>
 					</div>
 				</div>
-				<button>Contact</button>
+				<button type="submit">Contact</button>
 			</form>
 		</div>
 	</div>
@@ -53,6 +88,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-top: 32px;
 	}
 	.contact-info,
 	.contact-form {
@@ -96,5 +132,6 @@
 	textarea {
 		border: 1px solid #000;
 		border-radius: 5px;
+		padding: 4px 8px;
 	}
 </style>
