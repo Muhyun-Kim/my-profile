@@ -1,5 +1,3 @@
-<script></script>
-
 <div class="resume-page">
 	<div class="resume-page-frame">
 		<div class="resume">

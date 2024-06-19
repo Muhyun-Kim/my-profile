@@ -13,7 +13,7 @@
 				<FontAwesomeIcon icon={faEnvelope} />
 			</a>
 		</li>
-		<li class="social-contac">
+		<li class="social-contact">
 			<p>Follow Me</p>
 			<div class="social-contact-link">
 				<a href="https://github.com/Muhyun-Kim" target="_blank"
@@ -41,7 +41,7 @@
 		display: flex;
 		justify-content: center;
 	}
-	.social-contac {
+	.social-contact {
 		display: flex;
 		flex-direction: column;
 	}
